@@ -1,0 +1,75 @@
+body {
+    background-color: #1e1e1e;
+    transition: background-color 0.4s ease;
+    padding: 2rem;
+}
+
+/* Dark theme background */
+body.dark {
+    background-color: #1e1e1e;
+}
+
+/* Pill-shaped button */
+#theme-toggle {
+    width: 64px;
+    height: 32px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+body.dark #theme-toggle {
+    background-color: #444;
+}
+
+/* Slider that moves left/right */
+.slider {
+    background-color: #000000;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+    transform: translateX(0);
+}
+#theme-toggle:hover{
+    border:#0041e5;
+}
+
+body.dark .slider {
+    transform: translateX(32px);
+    background-color: #ffffff;
+}
+
+/* Both icons exist, but only one is shown at a time */
+.icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.sun-icon {
+    opacity: 0;
+}
+
+body.dark .sun-icon {
+    opacity: 1;
+}
+
+body.dark .moon-icon {
+    opacity: 0;
+}
