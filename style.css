@@ -1,12 +1,12 @@
 body {
-    background-color: #1e1e1e;
+    background-color: #ededed;
     transition: background-color 0.4s ease;
     padding: 2rem;
 }
 
 /* Dark theme background */
 body.dark {
-    background-color: #1e1e1e;
+    background-color: #161616;
 }
 
 /* Pill-shaped button */
